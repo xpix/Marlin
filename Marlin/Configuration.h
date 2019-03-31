@@ -131,7 +131,7 @@
 // The following define selects which electronics board you have.
 // Please choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_MKS_13
+  #define MOTHERBOARD BOARD_MKS_GEN_13
 #endif
 
 // Optional custom name for your RepStrap or other custom machine
@@ -1552,7 +1552,7 @@
 // Note: Usually sold with a blue PCB.
 //
 //#define G3D_PANEL
-define REPRAP_DISCOUNT_SMART_CONTROLLER
+#define REPRAP_DISCOUNT_SMART_CONTROLLER
 //
 // RigidBot Panel V1.0
 // http://www.inventapart.com/
