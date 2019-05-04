@@ -1284,6 +1284,7 @@ static_assert(X_MAX_LENGTH >= X_BED_SIZE && Y_MAX_LENGTH >= Y_BED_SIZE,
       #error "Enable USE_YMAX_PLUG when homing Y to MAX."
     #endif
   #endif
+
   #if Z_HOME_DIR < 0 && DISABLED(USE_ZMIN_PLUG)
     #error "Enable USE_ZMIN_PLUG when homing Z to MIN."
   #elif Z_HOME_DIR > 0 && DISABLED(USE_ZMAX_PLUG)
