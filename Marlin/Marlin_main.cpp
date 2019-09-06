@@ -1300,9 +1300,9 @@ bool get_target_extruder_from_command(const uint16_t code) {
       SERIAL_ECHOLNPAIR(" " MSG_INVALID_EXTRUDER " ", e);
       return true;
     }
+**/
     // target_extruder = e;
     target_extruder = active_extruder;
-**/
   }
   else
     target_extruder = active_extruder;
@@ -8432,6 +8432,7 @@ inline void gcode_M104() {
 
   #if ENABLED(SINGLENOZZLE)
     if (target_extruder != active_extruder) return;
+    if (target_extruder > 0) return; // XHTC change, don't control temp in singlenozzle for T1 or greater
   #endif
 
   if (parser.seenval('S')) {
@@ -8585,6 +8586,7 @@ inline void gcode_M109() {
 
   #if ENABLED(SINGLENOZZLE)
     if (target_extruder != active_extruder) return;
+    if (target_extruder > 0) return; // XHTC change, don't control temp in singlenozzle for T1 or greater
   #endif
 
   const bool no_wait_for_cooling = parser.seenval('S'),
