@@ -1300,9 +1300,9 @@ bool get_target_extruder_from_command(const uint16_t code) {
       SERIAL_ECHOLNPAIR(" " MSG_INVALID_EXTRUDER " ", e);
       return true;
     }
-**/
     // target_extruder = e;
     target_extruder = active_extruder;
+**/
   }
   else
     target_extruder = active_extruder;
