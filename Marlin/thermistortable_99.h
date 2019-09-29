@@ -21,7 +21,7 @@
  */
 
 // NTC-Thermistor 3950 100k 4.7k PullUp XHypercube CR10 Heatend
-const short temptable_13[][2] PROGMEM = {
+const short temptable_99[][2] PROGMEM = {
   { OV( 20.04), 285 },
   { OV( 23.19), 275 },
   { OV( 26.71), 265 },
