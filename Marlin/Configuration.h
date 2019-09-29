@@ -1340,7 +1340,7 @@
   #define NOZZLE_CLEAN_CIRCLE_MIDDLE NOZZLE_CLEAN_START_POINT
 
   // Moves the nozzle to the initial position
-  #define NOZZLE_CLEAN_GOBACK
+  // #define NOZZLE_CLEAN_GOBACK
 #endif
 
 /**
