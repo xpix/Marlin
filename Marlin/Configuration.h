@@ -1319,25 +1319,25 @@
  * Attention: EXPERIMENTAL. G-code arguments may change.
  *
  */
-#define NOZZLE_CLEAN_FEATURE
+//#define NOZZLE_CLEAN_FEATURE
 
 #if ENABLED(NOZZLE_CLEAN_FEATURE)
   // Default number of pattern repetitions
-  #define NOZZLE_CLEAN_STROKES  5
+  #define NOZZLE_CLEAN_STROKES  4
 
   // Default number of triangles
   #define NOZZLE_CLEAN_TRIANGLES  3
 
   // Specify positions as { X, Y, Z }
-  #define NOZZLE_CLEAN_START_POINT { 4, 40, 2}
-  #define NOZZLE_CLEAN_END_POINT   {-2, 10, 2}
+  #define NOZZLE_CLEAN_START_POINT {  4, 40, 2}
+  #define NOZZLE_CLEAN_END_POINT   { -1, 10, 2}
 
   // Circular pattern radius
-  #define NOZZLE_CLEAN_CIRCLE_RADIUS 3
+  #define NOZZLE_CLEAN_CIRCLE_RADIUS 6.5
   // Circular pattern circle fragments number
   #define NOZZLE_CLEAN_CIRCLE_FN 10
   // Middle point of circle
-  #define NOZZLE_CLEAN_CIRCLE_MIDDLE {1, 25, 2}
+  #define NOZZLE_CLEAN_CIRCLE_MIDDLE NOZZLE_CLEAN_START_POINT
 
   // Moves the nozzle to the initial position
   // #define NOZZLE_CLEAN_GOBACK
