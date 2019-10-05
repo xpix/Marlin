@@ -1289,7 +1289,10 @@ void get_available_commands() {
 bool get_target_extruder_from_command(const uint16_t code) {
   if (parser.seenval('T')) {
     const int8_t e = parser.value_byte();
-    if (e >= EXTRUDERS) {
+/**
+ * Change for XHTC, ignore Toolchange 
+ * and use it in octoprint
+ if (e >= EXTRUDERS) {
       SERIAL_ECHO_START();
       SERIAL_CHAR('M');
       SERIAL_ECHO(code);
@@ -1297,6 +1300,7 @@ bool get_target_extruder_from_command(const uint16_t code) {
       return true;
     }
     target_extruder = e;
+**/
   }
   else
     target_extruder = active_extruder;
@@ -12618,8 +12622,8 @@ void tool_change(const uint8_t tmp_extruder, const float fr_mm_s/*=0.0*/, bool n
 
   #else // !MIXING_EXTRUDER || MIXING_VIRTUAL_TOOLS <= 1
 
-    if (tmp_extruder >= EXTRUDERS)
-      return invalid_extruder_error(tmp_extruder);
+    // if (tmp_extruder >= EXTRUDERS)
+    //  return invalid_extruder_error(tmp_extruder);
 
     #if HOTENDS > 1
 

@@ -90,6 +90,10 @@
 #elif THERMISTOR_ID == 66
   #define THERMISTOR_NAME "Dyze 4.7M"
 
+#elif THERMISTOR_ID == 99
+  #define THERMISTOR_NAME "XHypercube"
+
+
 // Dummies for dev testing
 #elif THERMISTOR_ID == 998
   #define THERMISTOR_NAME "Dummy 1"
