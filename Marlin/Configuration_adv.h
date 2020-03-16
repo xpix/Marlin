@@ -382,8 +382,8 @@
 // @section homingDRV8825 
 
 // Homing hits each endstop, retracts by these distances, then does a slower bump.
-#define X_HOME_BUMP_MM 5
-#define Y_HOME_BUMP_MM 5
+#define X_HOME_BUMP_MM 0
+#define Y_HOME_BUMP_MM 0
 #define Z_HOME_BUMP_MM 2
 #define HOMING_BUMP_DIVISOR { 2, 2, 4 }  // Re-Bump Speed Divisor (Divides the Homing Feedrate)
 #define QUICK_HOME                     // If homing includes X and Y, do a diagonal move initially
@@ -1159,16 +1159,16 @@
 
   #define R_SENSE           0.11  // R_sense resistor for SilentStepStick2130
   #define HOLD_MULTIPLIER    0.5  // Scales down the holding current from run current
-  #define INTERPOLATE      false  // Interpolate X/Y/Z_MICROSTEPS to 256
+  #define INTERPOLATE       true  // Interpolate X/Y/Z_MICROSTEPS to 256
 
-  #define X_CURRENT          760  // rms current in mA. Multiply by 1.41 for peak current.
-  #define X_MICROSTEPS       256  // 0..256
+  #define X_CURRENT          500  // rms current in mA. Multiply by 1.41 for peak current.
+  #define X_MICROSTEPS       16  // 0..256
 
   #define Y_CURRENT          760
-  #define Y_MICROSTEPS       256
+  #define Y_MICROSTEPS       16
 
   #define Z_CURRENT          760
-  #define Z_MICROSTEPS       256
+  #define Z_MICROSTEPS       16
 
   #define X2_CURRENT         800
   #define X2_MICROSTEPS       16
